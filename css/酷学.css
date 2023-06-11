@@ -1,0 +1,668 @@
+* {
+    margin: 0;
+    padding: 0;
+
+}
+
+body {
+    background-color: #F3F5F7;
+
+}
+
+.head {
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    width: 100%;
+
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    z-index: 999;
+
+}
+
+.head .h1 {
+    position: absolute;
+    left: 80px;
+    height: 54px;
+}
+
+.head .b {
+    position: absolute;
+    left: 50px;
+    height: 50px;
+    width: 50px;
+    z-index: 1;
+}
+
+a {
+    display: inline-block;
+    margin-left: 50px;
+    height: 50px;
+    width: 100px;
+    text-align: center;
+    line-height: 50px;
+    text-decoration: none;
+    color: #050505;
+}
+
+.menu {
+    display: flex;
+    list-style: none;
+    top: 50%;
+    left: 35%;
+    /* background-color: #34495e; */
+    line-height: 50px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    border-radius: 5px;
+    padding: 0px 10px;
+}
+
+.menu .menu-item {
+    transition: .3s;
+    position: relative;
+}
+
+.mbg {
+    position: absolute;
+    height: 100%;
+    width: 100px;
+    z-index: -1;
+    border-radius: 5px;
+    left: 10px;
+    top: 0;
+    background-color: skyblue;
+    transition: .3s;
+}
+
+.menu-item:hover {
+    font-weight: bold;
+    transform: scale(1.3);
+}
+
+.menu-item:nth-child(2):hover~.mbg {
+    left: 160px;
+}
+
+.menu-item:nth-child(3):hover~.mbg {
+    left: 310px;
+}
+
+/* animate和visible类实现滑动浮现效果 */
+.animate {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s, transform 1s;
+}
+
+.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.serch {
+    position: absolute;
+    top: 10px;
+    right: 284px;
+    height: 30px;
+    width: 300px;
+    border: 1px solid #00a4ff;
+    border-radius: 30px;
+}
+
+.serch .input {
+    outline: none;
+    border: 0;
+    height: 30px;
+    width: 200px;
+    font-size: 14px;
+    margin: 0 10px;
+
+
+}
+
+.serch #h2 {
+    position: absolute;
+    right: 0;
+    height: 30px;
+    border-radius: 0 15px 15px 0;
+}
+
+#user {
+    position: absolute;
+    right: 241px;
+    top: 10px;
+}
+
+.head p {
+
+    float: right;
+    position: absolute;
+    right: 117px;
+    top: 18px;
+    font-size: 12px;
+    color: #666666;
+}
+
+.daohang {
+
+    padding-top: 60px;
+    position: relative;
+    height: 420px;
+    /* background-color: #1c036c; */
+    overflow: hidden;
+}
+
+.daohanglb {
+    .swiper-container {
+        width: 100%;
+        height: 100%;
+    }
+
+    .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        
+
+
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+        transition: 300ms;
+        transform: scale(0.8);
+    }
+
+    .swiper-slide-active,
+    .swiper-slide-duplicate-active {
+        transform: scale(1);
+    }
+
+}
+
+.lb {
+
+    margin-top: 30px;
+    margin-bottom: 30px;
+
+    .swiper-container {
+        width: 100%;
+        height: 100%;
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+
+    .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        /* background: #fff; */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+    }
+}
+
+.left {
+    position: absolute;
+    left: 143px;
+    top: 63px;
+    height: 420px;
+    width: 211px;
+    font-size: 16px;
+    background: rgba(0, 0, 0, .3);
+    z-index: 998;
+}
+
+.left a {
+    position: relative;
+
+    margin: 0 auto;
+    display: block;
+    color: white;
+    height: 45px;
+    width: 200px;
+    text-align: left;
+    text-indent: 2em;
+    background: rgba(0, 0, 0, .02)
+}
+
+.left a:hover {
+    color: #00b4ff;
+}
+
+.left a span img {
+    position: absolute;
+    right: 14px;
+    top: 20px;
+}
+
+.goods {
+
+    position: relative;
+    margin-top: 40px;
+    margin-left: 15%;
+    /* width: 1100px; */
+    height: 40px;
+    /* background-color: #ffffff; */
+    box-shadow: 0px 2px 3px 0px rgba(118, 118, 118, 0.2);
+}
+
+.goods p {
+
+    padding-left: 10px;
+    float: left;
+    height: 40px;
+    width: 70px;
+    line-height: 40px;
+    color: #00a4ff;
+}
+
+.goods .position {
+    position: absolute;
+    right: 10px;
+    top: 0;
+}
+
+.goods div {
+    position: relative;
+    left: 20px;
+    top: 5px;
+    display: inline-block;
+    height: 20px;
+    width: 2px;
+    background-color: #e5e5e5;
+}
+
+.goods a {
+    height: 40px;
+    width: 90px;
+    line-height: 40px;
+}
+
+.goods a:hover {
+    font-weight: bold;
+    transform: scale(1.3);
+    /* background-color: white; */
+    color: #00a4ff;
+    background-size: 100% 1px;
+}
+
+.p {
+
+    position: relative;
+    
+    float: left;
+    margin-left: 15px;
+    margin-bottom: 15px;
+    height: 280px;
+    width: 230px;
+    background-color: white;
+}
+
+.p img {
+    width: 230px;
+}
+
+.p a {
+    position: absolute;
+    left: 0px;
+    top: 195px;
+    margin: 0;
+    height: 25px;
+    width: 230px;
+    font-size: 16px;
+    line-height: 25px;
+}
+
+.p a:hover {
+    background-color: white;
+    color: #00a4ff;
+}
+
+.p:hover {
+    box-shadow: 10px 10px 20px 10px rgba(0, 0, 0, .4);
+}
+
+.p div {
+    position: relative;
+    left: 60px;
+    top: 98px;
+    width: 121px;
+    height: 12px;
+    font-size: 12px;
+}
+
+.fnav {
+
+    z-index: 3;
+    position: fixed;
+    left: 90%;
+    top: 306px;
+    width: 183px;
+    height: 255px;
+    background: rgba(0, 0, 0, .3);
+    border-radius: 30px;
+}
+
+.fnav ul li {
+    list-style: none;
+}
+
+.fnav ul li a {
+    margin: 24px 0 -5px;
+    height: 25px;
+    width: 183px;
+    line-height: 25px;
+    font-size: 14px;
+    color: white;
+    background: rgba(0, 0, 0, 0);
+}
+
+.fnav ul li a:hover {
+    color: #00a4ff;
+}
+
+.stages{ 
+	margin:0px auto; 
+	padding:0px; 
+	border:1px solid #c4c4c4; 
+	height:30px; 
+	width:998px; 
+	line-height:30px; 
+	vertical-align:middle; 
+	text-align:left; 
+	overflow:hidden;
+}
+.stages_title{ 
+	width:96px; 
+	text-align:center; 
+	border-right:1px solid #c4c4c4; 
+	float:left;
+}
+.stages_con{ 
+	width:900px; 
+	float:left;
+}
+.stages_con ul li{float:left; list-style: none;}
+.stages_con ul li a{ 
+	/* background:url(../images/icon6.gif) no-repeat left center;  */
+	padding:0px 0px 0px 0px; 
+	margin:0px 400px 0px 0px; 
+	width:3px; 
+	height:5px; 
+	line-height:2px; 
+	vertical-align:middle; 
+	color:#212121;
+ }
+
+.pro {
+
+    position: relative;
+    width: 1100px;
+    margin: 0 auto;
+    margin-top: 80px;
+    overflow: hidden;
+
+}
+
+.pro .pleft {
+    position: absolute;
+    left: 42px;
+    margin: 0;
+    height: 19px;
+    width: 66px;
+    line-height: 19px;
+}
+
+.pro div {
+    display: inline-block;
+    margin-left: 285px;
+}
+
+.pro div a {
+    width: 66px;
+    height: 19px;
+    line-height: 19px;
+}
+
+.pro .pright {
+    position: absolute;
+    right: 58px;
+    margin: 0;
+    height: 19px;
+    width: 66px;
+    line-height: 19px;
+}
+
+.pro a:hover {
+    background-color: #F3F5F7;
+    color: #00a4ff;
+}
+
+.pro .conts {
+    position: relative;
+    height: 400px;
+    width: 1100px;
+    margin-top: 50px;
+    margin-left: 80px;
+    ;
+}
+
+.pro .conts .cleft {
+    position: absolute;
+    left: -18px;
+    top: -35px;
+}
+
+.pro .conts .ctop {
+    position: absolute;
+    right: 155px;
+    top: -35px;
+    float: left;
+    width: 719px;
+    height: 100px;
+}
+
+.pro .conts div .p {
+    position: relative;
+    left: -75px;
+    top: 76px;
+    float: left;
+    margin-left: 15px;
+    margin-bottom: 15px;
+    height: 280px;
+    width: 230px;
+    background-color: white;
+}
+
+.conts div .p img {
+    width: 230px;
+}
+
+.conts div .p a {
+    position: absolute;
+    left: 0px;
+    top: 195px;
+    margin: 0;
+    height: 25px;
+    width: 230px;
+    font-size: 16px;
+    line-height: 25px;
+}
+
+.conts div .p a:hover {
+    background-color: white;
+}
+
+.conts div .p div {
+    z-index: 2;
+    position: relative;
+    left: -222px;
+    top: 98px;
+    width: 121px;
+    height: 12px;
+    font-size: 12px;
+}
+
+.pro .size {
+    width: 1100px;
+    height: 330px;
+    margin-left: 0;
+    overflow: hidden;
+}
+
+.pro .size .p1 {
+    position: relative;
+    left: 46px;
+    top: 0px;
+    margin: 15px 0 0 15px;
+    height: 280px;
+    width: 230px;
+    background-color: white;
+}
+
+.p1 img {
+    width: 230px;
+}
+
+.pro .size .p1 a {
+    position: absolute;
+    left: 0;
+    top: 195px;
+    margin: 0;
+    height: 25px;
+    width: 230px;
+    font-size: 16px;
+    line-height: 25px;
+}
+
+.pro .size .p1 p {
+    position: absolute;
+    left: 64px;
+    top: 264px;
+    height: 12px;
+    font-size: 12px;
+    width: 121px;
+}
+
+.pro .size .p1 a:hover {
+    background-color: white;
+}
+
+.p1:hover {
+    box-shadow: 10px 10px 20px 10px rgba(0, 0, 0, .4);
+}
+
+.nb {
+
+    position: absolute;
+    left: 400px;
+    top: 2000px;
+}
+
+.nb span {
+    display: inline-block;
+}
+
+.nb p {
+    display: inline-block;
+    font-size: 24px;
+}
+
+.bottom {
+
+    position: relative;
+    height: 200px;
+    background-color: #333333;
+}
+
+.bottom img {
+    position: absolute;
+    left: 4%;
+    top: 16%;
+    height: 80px;
+    width: 80px;
+}
+
+.bottom .bot1 {
+    position: absolute;
+    right: 10%;
+    margin-top: 5px;
+    font-size: 12px;
+}
+
+.bottom .bot1 a {
+    display: block;
+
+    margin-top: 16px;
+    height: 20px;
+    width: 50px;
+    color: white;
+    line-height: 20px;
+    background-color: none;
+}
+
+.bottom .bot1 a:hover {
+    background-color: #333333;
+    color: red;
+}
+
+.bottom .bot1 div {
+    float: left;
+}
+
+.bottom .bot2 {
+    position: absolute;
+    left: 50%;
+    top: 60%;
+}
+
+.bottom .bot2 div {
+    height: 30px;
+    width: 200px;
+}
+
+.bottom .bot2 div p {
+    color: white;
+    font-size: 14px;
+}
+
+.bottom .text p {
+    position: absolute;
+    left: 12%;
+    top: 21%;
+    color: white;
+    font-size: 22px;
+}
+
+.bottom .code {
+    position: absolute;
+    left: 30%;
+    top: 16%;
+    height: 80px;
+    width: 80px;
+}
